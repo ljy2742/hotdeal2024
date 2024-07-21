@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        .box {
+            background: #272727;
+            color: #fff;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+        .inputBox {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .inputBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+        .inputBox span {
+            position: absolute;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #bbb;
+            transition: 0.3s;
+        }
+        .inputBox input:focus ~ span,
+        .inputBox input:valid ~ span {
+            transform: translateY(-20px);
+            font-size: 12px;
+            color: #ff5722;
+        }
+        .links {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        .links a {
+            color: #ff5722;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .box h2 {
+            margin: 0 0 20px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+        .box button {
+            width: 100%;
+            background: #ff5722;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .box button:hover {
+            background: #e64a19;
+        }
+        .error-message {
+            color: #ff5722;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <form th:action="@{/user/login}" method="post">
+        <h2>로그인</h2>
+        <div th:if="${param.error}" class="error-message">
+            ID 또는 비밀번호를 확인해 주세요.
+        </div>
+        <div class="inputBox">
+            <input type="text" name="username" id="username" required>
+            <span>아이디</span>
+            <i></i>
+        </div>
+        <div class="inputBox">
+            <input type="password" name="password" id="password" required>
+            <span>비밀번호</span>
+            <i></i>
+        </div>
+        <div class="links">
+            <a href="signup.html">회원가입</a>
+            <a href="#">비밀번호 찾기</a>
+        </div>
+        <button type="submit">로그인</button>
+    </form>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

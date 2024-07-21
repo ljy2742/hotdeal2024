@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>홈</title>
+</head>
+<body>
+<div class="container">
+    <p>회원 기능</p>
+    <div>
+        <a href="/user/signup">회원 가입</a>
+        <a sec:authorize="isAnonymous" href="/user/login">로그인</a>
+        <a sec:authorize="isAuthenticated" href="/user/logout">로그아웃</a>
+        <a sec:authorize="isAuthenticated" href="/user/delete">회원 탈퇴</a>
+    </div>
+    <p>글 기능</p>
+    <div>
+        <a href="/board/list">글 목록</a>
+    </div>
+</div>
+</body>
+</html>

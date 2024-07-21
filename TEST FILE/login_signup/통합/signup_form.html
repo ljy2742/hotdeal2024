@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+        }
+        .box {
+            background: #272727;
+            color: #fff;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 300px;
+        }
+        .inputBox {
+            position: relative;
+            margin-bottom: 30px;
+        }
+        .inputBox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #fff;
+            border: none;
+            border-bottom: 1px solid #fff;
+            outline: none;
+            background: transparent;
+        }
+        .inputBox span {
+            position: absolute;
+            left: 0;
+            padding: 10px 0;
+            font-size: 16px;
+            color: #bbb;
+            transition: 0.3s;
+        }
+        .inputBox input:focus ~ span,
+        .inputBox input:valid ~ span {
+            transform: translateY(-20px);
+            font-size: 12px;
+            color: #ff5722;
+        }
+        .box h2 {
+            margin: 0 0 20px;
+            padding: 0;
+            color: #fff;
+            text-align: center;
+        }
+        .box button {
+            width: 100%;
+            background: #ff5722;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .box button:hover {
+            background: #e64a19;
+        }
+        .error-message {
+            color: #ff5722;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <form th:action="@{/user/signup}" th:object="${userCreateForm}" method="post">
+        <h2>회원가입</h2>
+        <div th:replace="~{form_errors :: formErrorsFragment}" class="error-message"></div>
+        <div class="inputBox">
+            <input type="text" id="username" th:field="*{username}" required>
+            <span>ID</span>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="password" th:field="*{password}" required>
+            <span>비밀번호</span>
+        </div>
+        <div class="inputBox">
+            <input type="password" id="checkPassword" th:field="*{checkPassword}" required>
+            <span>비밀번호 확인</span>
+        </div>
+        <div class="inputBox">
+            <input type="email" id="email" th:field="*{email}" required>
+            <span>이메일</span>
+        </div>
+        <button type="submit">회원가입</button>
+    </form>
+</div>
+
+<script src="signup.js"></script>
+</body>
+</html>
