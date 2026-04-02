@@ -22,7 +22,7 @@
 * **Framework:** FastAPI / Django / Spring Boot / Express
 * **Database:** PostgreSQL / MySQL / MongoDB / Redis
 
-### Frontend (해당 시 작성)
+### Frontend
 * **Framework:** React / Vue.js / Next.js
 * **Styling:** Tailwind CSS / Styled-components
 
@@ -30,17 +30,3 @@
 * **Deployment:** AWS EC2 / Docker / GitHub Actions
 * **Scraping:** BeautifulSoup / Selenium / Playwright
 
-<br/>
-
-## 🚀 설치 및 실행 방법 (Getting Started)
-
-### 요구 사항 (Prerequisites)
-* Python 3.9 이상
-* Docker & Docker Compose (선택 사항)
-
-### 설치 (Installation)
-
-1. 저장소를 클론합니다.
-```bash
-git clone [https://github.com/ljy2742/hotdeal2024.git](https://github.com/ljy2742/hotdeal2024.git)
-cd hotdeal2024
