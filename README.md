@@ -18,7 +18,7 @@
 ## 🛠 기술 스택 (Tech Stack)
 
 ### Backend
-* **Language:** Python 3.x / Node.js / Java (사용하신 언어로 수정)
+* **Language:** Python 3.x / Node.js / Java 
 * **Framework:** FastAPI / Django / Spring Boot / Express
 * **Database:** PostgreSQL / MySQL / MongoDB / Redis
 
