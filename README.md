@@ -1,32 +1,52 @@
-# 🛒 HotDeal2024
+# 🔥 HotDealWalk - 핫딜 커뮤니티 웹 서비스
 
-> **실시간 핫딜 정보 수집 및 알림 서비스**
-> 
-> 쇼핑몰 및 주요 커뮤니티의 핫딜 정보를 한곳에 모아보고, 원하는 키워드의 상품이 올라오면 빠르게 알림을 받을 수 있는 프로젝트입니다.
+## 📌 프로젝트 소개
+사용자들이 할인 정보와 다양한 의견을 공유할 수 있는 커뮤니티 웹 서비스입니다.  
+게시글, 댓글, 좋아요 기능을 통해 사용자 간 상호작용을 중심으로 구현했습니다.
 
-<br/>
+---
 
-## ✨ 주요 기능 (Features)
+## 🛠 기술 스택
+- Frontend: HTML, CSS, JavaScript  
+- Backend: Spring Boot  
+- Database: MySQL  
 
-* **🔍 실시간 핫딜 크롤링:** 주요 커뮤니티(뽐뿌, 루리웹, 퀘이사존, 에펨코리아 등)의 핫딜 게시판 데이터를 주기적으로 수집합니다.
-* **🔔 맞춤형 키워드 알림:** 사용자가 등록한 관심 키워드(예: 아이패드, SSD, 햇반 등)가 포함된 핫딜이 뜨면 메신저(텔레그램, 디스코드, 카카오톡 등)로 알림을 전송합니다.
-* **📊 조건별 필터링 및 검색:** 카테고리, 추천 수, 댓글 수, 가격대별로 핫딜 정보를 쉽게 필터링하고 검색할 수 있습니다.
-* **💡 마감된 핫딜 처리:** 종료되거나 품절된 핫딜은 시각적으로 구분하여 사용자 편의성을 높였습니다.
+---
 
-<br/>
+## 🚀 주요 기능
+- 회원가입 / 로그인 / 로그아웃  
+- 게시글 CRUD  
+- 댓글 및 좋아요 기능  
+- 검색 및 카테고리 기능  
+- 인기 게시글 정렬  
 
-## 🛠 기술 스택 (Tech Stack)
+---
 
-### Backend
-* **Language:** Python 3.x / Node.js / Java 
-* **Framework:** FastAPI / Django / Spring Boot / Express
-* **Database:** PostgreSQL / MySQL / MongoDB / Redis
+## 👨‍💻 담당 역할
+- 전체 UI 설계 및 구현 (HTML, CSS, JavaScript)
+- 반응형 웹 디자인 적용
+- 게시글 목록 및 상세 페이지 UI 구성
+- 사용자 흐름 개선
 
-### Frontend
-* **Framework:** React / Vue.js / Next.js
-* **Styling:** Tailwind CSS / Styled-components
+---
 
-### Infrastructure & Tools
-* **Deployment:** AWS EC2 / Docker / GitHub Actions
-* **Scraping:** BeautifulSoup / Selenium / Playwright
+## 🔧 문제 해결 경험
+- 모바일 환경에서 레이아웃이 깨지는 문제  
+→ media query를 활용하여 반응형으로 개선  
 
+- 버튼 위치가 직관적이지 않은 문제  
+→ 사용자 흐름을 고려하여 UI 구조 재설계  
+
+- CSS 구조가 복잡하여 유지보수가 어려운 문제  
+→ 스타일 구조를 단순화하여 가독성 개선  
+
+---
+
+## 📷 화면 예시
+(스크린샷 넣기 - 진짜 중요)
+
+---
+
+## 🔗 링크
+- GitHub: https://github.com/ljy2742/hotdeal2024
+- (배포 주소 있으면 추가)
